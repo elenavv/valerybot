@@ -24,7 +24,7 @@ dp = Dispatcher()
 #ф-ция назв_функции(имя_переменной тип_данных)
 @dp.message(CommandStart())
 async def command_start_handler(message:Message):
-    await message.answer(f"Привет{message.from_user.full_name}!",reply_markup=keyboard)
+    await message.answer(f"Привет, {message.from_user.full_name}!",reply_markup=keyboard)
 
 
 
@@ -48,7 +48,7 @@ async def send_welcome(message: Message):
 
 @dp.message(lambda message: message.text =="👧Нажми меня")
 async def send_greeting(message: Message):
-    await message.answer("Привет")
+    await message.answer("Кнопка в разработке, нажми следующую) ")
 
 @dp.message(lambda message: message.text =="▶️🧸Мимимишки")
 async def mimimishki (message:Message):
